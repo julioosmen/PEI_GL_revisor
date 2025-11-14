@@ -3,9 +3,9 @@ import pandas as pd
 def generar_ruta_estrategica(oei_df, aei_df):
     """
     Genera la tabla de Ruta Estratégica combinando OEI y AEI extraídos
-    con sus vínculos PGG (data/vinculos_pgg.xlsx).
+    con sus vínculos PGG (data/vinculacion_pgg.xlsx).
     """
-    vinculos = pd.read_excel("data/vinculos_pgg.xlsx", engine="openpyxl")
+    vinculos = pd.read_excel("data/vinculacion_pgg.xlsx", engine="openpyxl")
 
     # Asegurar columnas esperadas
     # Se espera que el archivo tenga columnas:
