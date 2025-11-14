@@ -9,16 +9,16 @@ def generar_ruta_estrategica(oei_df, aei_df):
 
     # Asegurar columnas esperadas
     # Se espera que el archivo tenga columnas:
-    # 'Codigo OEI', 'Vinculación OEI-PGG', 'Codigo AEI', 'Vinculación AEI-PGG'
+    # 'Codigo OEI', 'Vinculación OEI con la PGG', 'Codigo AEI', 'Vinculación AEI con la PGG'
 
     oei_df = oei_df.merge(
-        vinculos[["Codigo OEI", "Vinculación OEI-PGG"]],
+        vinculos[["Codigo OEI", "Vinculación OEI con la PGG"]],
         on="Codigo OEI",
         how="left"
     )
 
     aei_df = aei_df.merge(
-        vinculos[["Codigo AEI", "Vinculación AEI-PGG"]],
+        vinculos[["Codigo AEI", "Vinculación AEI con la PGG"]],
         on="Codigo AEI",
         how="left"
     )
@@ -34,8 +34,8 @@ def generar_ruta_estrategica(oei_df, aei_df):
     )
 
     columnas_finales = [
-        "Codigo OEI", "Denominacion OEI", "Vinculación OEI-PGG",
-        "Codigo AEI", "Denominacion AEI", "Vinculación AEI-PGG"
+        "Codigo OEI", "Denominacion OEI", "Vinculación OEI con la PGG",
+        "Codigo AEI", "Denominacion AEI", "Vinculación AEI con la PGG"
     ]
     ruta = ruta[[col for col in columnas_finales if col in ruta.columns]]
 
