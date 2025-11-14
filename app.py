@@ -3,8 +3,8 @@ import pandas as pd
 from modules.comparador import extraer_tablas, comparar_elementos
 from modules.generador import generar_ruta_estrategica
 
-st.set_page_config(page_title="Integrador PEI", layout="wide")
-st.title("🧭 Integrador PEI: Comparador + Ruta Estratégica Automática")
+st.set_page_config(page_title="Revisor PEI - Gobiernos Locales", layout="wide")
+st.title("🧭 Revisor PEI: Comparador de elementos PEI + Ruta Estratégica Automática")
 
 # === PASO 1: Carga del archivo del usuario ===
 st.header("📘 1. Carga del documento PEI")
